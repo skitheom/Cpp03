@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 23:50:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/12/12 21:58:00 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/12/12 21:58:42 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 #include <string>
 
 class ClapTrap {
-private:
+protected:
   std::string name_;
   unsigned int hitPoints_;
   unsigned int energyPoints_;
   unsigned int attackDamage_;
   unsigned int maxHitPoints_;
 
+private:
   void printNoHitPointsMsg() const;
   void printNoEnergyPointsMsg() const;
   void printAttackMsg(const std::string &message) const;
