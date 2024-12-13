@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 23:50:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/12/12 21:58:00 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/12/13 14:06:12 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
   unsigned int attackDamage_;
   unsigned int maxHitPoints_;
 
+  void printName() const;
   void printNoHitPointsMsg() const;
   void printNoEnergyPointsMsg() const;
   void printAttackMsg(const std::string &message) const;

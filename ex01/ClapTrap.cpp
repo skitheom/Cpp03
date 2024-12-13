@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 23:55:06 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/12/12 21:55:19 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/12/13 13:37:33 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 }
 
 ClapTrap::~ClapTrap() {
-  std::cout << "ClapTrap " << this->name_
-            << " has been destroyed and removed from memory" << std::endl;
+  std::cout << "ClapTrap [" << this->name_ << "] is destroyed" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
@@ -49,47 +48,53 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
   return *this;
 }
 
+void ClapTrap::printName() const {
+  std::cout << "ClapTrap [" << this->name_ << "]";
+}
+
 void ClapTrap::printNoHitPointsMsg() const {
-  std::cout << "ClapTrap " << this->name_
-            << " can't do anything because it has no hit points left"
+  printName();
+  std::cout << " can't do anything because it has no hit points left"
             << std::endl;
 }
 
 void ClapTrap::printNoEnergyPointsMsg() const {
-  std::cout << "ClapTrap " << this->name_
-            << " can't do anything because it has no energy points left"
+  printName();
+  std::cout << " can't do anything because it has no energy points left"
             << std::endl;
 }
 
 void ClapTrap::printAttackMsg(const std::string &target) const {
-  std::cout << "ClapTrap " << this->name_ << " attacks " << target
-            << ", causing " << this->attackDamage_ << " points of damage!"
-            << std::endl;
+  printName();
+  std::cout << " attacks " << target << ", causing " << this->attackDamage_
+            << " points of damage!" << std::endl;
 }
 
 void ClapTrap::printAlreadyDeadMsg() const {
-  std::cout << "ClapTrap " << this->name_ << " has been incapacitated (HP: 0)"
-            << std::endl;
+  printName();
+  std::cout << " has been incapacitated (HP: 0)" << std::endl;
 }
 
 void ClapTrap::printDeathMsg(unsigned int amount) const {
-  std::cout << "ClapTrap " << this->name_ << " is incapacitated after taking "
-            << amount << " points of damage" << std::endl;
-}
-
-void ClapTrap::printTakeDamageMsg(unsigned int amount) const {
-  std::cout << "ClapTrap " << this->name_ << " takes " << amount
+  printName();
+  std::cout << " is incapacitated after taking " << amount
             << " points of damage" << std::endl;
 }
 
+void ClapTrap::printTakeDamageMsg(unsigned int amount) const {
+  printName();
+  std::cout << " takes " << amount << " points of damage" << std::endl;
+}
+
 void ClapTrap::printHitPointsAlreadyFullMsg() const {
-  std::cout << "ClapTrap " << this->name_ << " already has full hit points"
-            << std::endl;
+  printName();
+  std::cout << " already has full hit points" << std::endl;
 }
 
 void ClapTrap::printBeRepairedMsg(unsigned int amount) const {
-  std::cout << "ClapTrap " << this->name_ << " repairs itself, restoring "
-            << amount << " hit points" << std::endl;
+  printName();
+  std::cout << " repairs itself, restoring " << amount << " hit points"
+            << std::endl;
 }
 
 bool ClapTrap::checkStatus() {
