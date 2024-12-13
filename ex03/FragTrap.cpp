@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 22:06:26 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/12/13 14:21:35 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/12/13 17:39:32 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,10 @@ FragTrap &FragTrap::operator=(const FragTrap &other) {
 }
 
 void FragTrap::highFivesGuys(void) {
-  std::cout << "FragTrap [" << this->name_
-            << "] says: Hey! Let's do high fives, guys!" << std::endl;
+  std::cout << "FragTrap [" << this->name_;
+  if (this->hitPoints_ == 0) {
+    std::cout << "] is out of HP and can't give high fives." << std::endl;
+    return;
+  }
+  std::cout << "] says: Hey! Let's do high fives, guys!" << std::endl;
 }

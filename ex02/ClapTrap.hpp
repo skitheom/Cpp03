@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 23:50:24 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/12/13 13:34:12 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/12/13 17:26:43 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ private:
 public:
   ClapTrap();
   ClapTrap(const std::string &name);
-  ClapTrap(const ClapTrap &clapTrap);
+  ClapTrap(const ClapTrap &other);
   ~ClapTrap();
 
-  ClapTrap &operator=(const ClapTrap &clapTrap);
+  ClapTrap &operator=(const ClapTrap &other);
 
   void attack(const std::string &target);
   void takeDamage(unsigned int amount);
