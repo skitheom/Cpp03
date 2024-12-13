@@ -6,7 +6,7 @@
 /*   By: sakitaha <sakitaha@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 01:39:31 by sakitaha          #+#    #+#             */
-/*   Updated: 2024/12/13 15:57:36 by sakitaha         ###   ########.fr       */
+/*   Updated: 2024/12/13 16:21:54 by sakitaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,9 @@ void testCopyConstructorAndAssignment() {
   DiamondTrap d3("Mango");
   d3 = d1;
   d3.whoAmI();
+  d3.guardGate();
+  d3.guardGate();
+  d3.highFivesGuys();
 }
 
 int main() {
