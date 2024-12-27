@@ -5,3 +5,4 @@
 - シンプルな継承
 - 仮想継承
 - Diamond継承問題
+- -Wshadow and -Wno-shadow compiler flags
