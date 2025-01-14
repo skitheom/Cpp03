@@ -9,17 +9,17 @@
 
 ## Exercises
 ### Exercise 00: Annnnnnd... ACTION!
-ClapTrapクラスの実装
+- ClapTrapクラスの実装
 
 ### Exercise 01: Serena, My Love!
-ClapTrapを継承するScavTrapクラスの実装
+- ClapTrapを継承するScavTrapクラスの実装
 
 ### Exercise 02: Assembly Line Work
-ClapTrapを継承するFragTrapクラスの実装
+- ClapTrapを継承するFragTrapクラスの実装
 
 ### Exercise 03: Ok, This Is Getting Weird
-ScavTrapとFragTrapを継承するDiamondTrapクラスの実装
-Diamond継承問題を回避するため、virtual継承を用いる
+- ScavTrapとFragTrapを継承するDiamondTrapクラスの実装
+- virtual継承を用いて、Diamond継承問題を回避する
 
 ## References
 [CPP Module 03(For 42 École Students Only)](https://projects.intra.42.fr/projects/cpp-module-03)
